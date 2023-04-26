@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="expires" content="0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Heebo:wght@400;700&family=Jockey+One&display=swap" rel="stylesheet">
+    <title>Video Storage</title>
+    <link rel="stylesheet" href="../css/main.css" class="disable-caching-href">
+    <link rel="stylesheet" href="../css/header.css" class="disable-caching-href">
+    <link rel="stylesheet" href="../css/sidebar.css" class="disable-caching-href">
+    <link rel="stylesheet" href="../css/index.css" class="disable-caching-href">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header wrapper flex">
+            <div class="header__left-side">
+                <button class="header__menu activating"></button>
+                <a href="index.html"><div class="header__logo activating"></div></a>
+            </div>
+
+            <div class="header__search">
+                <input type="search" class="header__search-place" placeholder="Поиск">
+                <button type="submit" class="header__search-submit"></button>
+            </div>
+
+            <div class="header__right-side">
+                <a href="login.html" class="header__login activating">Войти</a>
+                <a href="registration.html" class="header__registration activating">Зарегистрироваться</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper flex">
+            <div class="sidebar able activating-sidebar">
+                <div class="sidebar__main-block sidebar__block">
+                    <div class="sidebar-case">
+                        <p class="sidebar__text">Рекомендации</p>
+                    </div>
+
+                    <div class="sidebar-case">
+                        <p class="sidebar__text">Подписки</p>
+                    </div>
+
+                    <div class="sidebar-case">
+                        <p class="sidebar__text">Понравившиеся</p>
+                    </div>
+
+                    <div class="sidebar-case">
+                        <p class="sidebar__text">История</p>
+                    </div>
+                </div>
+
+                <div class="sidebar__subscribes-block sidebar__block">
+
+                    <h3 class="sidebar__title">Ваши подписки:</h3>
+                    <div class="sidebar__subscribes-place">
+                    <!--SPA LOADING PLACE-->
+                    </div>
+                    <button class="sidebar__show-all" id="subscribes-show-all">Показать всё</button>
+                </div>
+
+                <div class="sidebar__category-block sidebar__block">
+                    <h3 class="sidebar__title">Категории:</h3>
+
+                    <div class="sidebar-case">
+                        <p class="sidebar__text">Игры</p>
+                    </div>
+
+                    <div class="sidebar-case">
+                        <p class="sidebar__text">Животные</p>
+                    </div>
+
+                    <div class="sidebar-case">
+                        <p class="sidebar__text">Прямые эфиры</p>
+                    </div>
+
+                    <div class="sidebar-case">
+                        <p class="sidebar__text">Блоги</p>
+                    </div>
+
+                    <div class="sidebar-case">
+                        <p class="sidebar__text">Окружающий мир</p>
+                    </div>
+
+                    <button class="sidebar__show-all">Показать всё</button>
+                </div>
+            </div>
+
+            <div class="videos">
+                <!--SPA LOADING PLACE-->
+            </div>
+        </div>
+    </main>
+    <script src="blueprint.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Heebo:wght@400;700&family=Jockey+One&display=swap" rel="stylesheet">
+    <title>Regisration</title>
+    <link rel="stylesheet" href="css/main.css" class="disable-caching-href">
+    <link rel="stylesheet" href="css/header.css" class="disable-caching-href">
+    <link rel="stylesheet" href="css/logreg.css" class="disable-caching-href">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+</head>
+<body class="logreg-body">
+<header>
+    <div class="header wrapper flex">
+        <div class="header__left-side">
+            <a href="index.html"><div class="header__logo activating"></div></a>
+        </div>
+
+        <div class="header__right-side">
+            <img src="images/settings.svg" alt="settings" class="header__settings activating">
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="main wrapper flex login-box">
+        <div class="login">
+            <form action="#" class="logreg-form">
+                <h2 class="login__title">Зарегистрироваться</h2>
+                <div class="logreg__input-box">
+                    <input type="text" class="login__place login__password password" required min="1">
+                    <label class="input__label">Account name</label>
+                    <img src="images/reglog/account.svg" alt="icon" class="reglog__input-img">
+                </div>
+                <div class="logreg__input-box">
+                    <input type="text" class="login__place login__email email" required min="1">
+                    <label class="input__label">Email</label>
+                    <img src="images/reglog/mail.svg" alt="icon" class="reglog__input-img">
+                </div>
+                <div class="logreg__input-box">
+                    <input type="password" class="login__place login__password password" required min="1">
+                    <label class="input__label">Password</label>
+                    <img src="images/reglog/password.svg" alt="icon" class="reglog__input-img">
+                </div>
+                <div class="logreg__input-box">
+                    <input type="password" class="login__place login__password password" required min="1">
+                    <label class="input__label">Repeat password</label>
+                    <img src="images/reglog/password.svg" alt="icon" class="reglog__input-img">
+                </div>
+                <div class="logreg__input-box flex align-items-center">
+                    <input type="checkbox" class="input-checkbox">
+                    <label class="input-checkbox__label">Запомнить меня</label>
+                </div>
+                <button class="login__submit">Отправить</button>
+                <a href="login.html" class="reglog_a">Есть аккаунт?</a>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>

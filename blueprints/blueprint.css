@@ -1,0 +1,130 @@
+.videos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5rem 5rem 5rem;
+    margin-top: 1.25rem;
+    gap: 30px;
+    align-items: center;
+}
+
+.videos__row {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-evenly;
+    gap: 1.25rem;
+}
+
+.video-block {
+    width: 21.875rem;
+    height: 18.75rem;
+    padding: 0 0 0.625rem 0;
+    transition: 100ms;
+    border-radius: 10px;
+}
+
+.video-block__a {
+    height: 18.75rem;
+}
+
+.video-block:hover {
+    transition: 100ms;
+}
+
+.video-block__video-preview {
+    width: 100%;
+    max-height: 195px;
+    height: auto;
+    border-radius: 0.625rem;
+}
+
+.video-block__name {
+    font-size: 1.125rem;
+    font-family: 'Heebo', sans-serif;
+    color: var(--vs-yellow);
+}
+
+.videos__information > .avatar {
+    width: 2.1875rem;
+    height: 2.1875rem;
+}
+
+.videos__channel-block {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.confirmed {
+    position: relative;
+    top: 0.125rem;
+    display: block;
+    height: 0.625rem;
+    width: 0.625rem;
+
+}
+
+.videos__information {
+    margin-top: 0.3125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.video-block__statistic {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4375rem;
+}
+
+.video-block__statistic * {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: -0.04em;
+
+    color: var(--vs-yellow);
+}
+
+.fixed {
+    position: fixed;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.footer-nav {
+    width: 100%;
+    height: 5vh;
+    background: var(--vs-background);
+    border-top: 0.125rem solid var(--vs-highlighted);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.25rem;
+    display: none;
+}
+
+.footer__footer-nav {
+    bottom: 0;
+}
+
+.footer-nav__svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@media (max-width: 450px) {
+    .footer-nav {
+        display: flex;
+    }
+
+    .footer-nav__svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .footer-nav__svg-logo {
+        width: 100px;
+    }
+}

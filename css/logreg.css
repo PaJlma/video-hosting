@@ -1,0 +1,137 @@
+.logreg-body {
+    background-image: url("../images/reglog/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 98vh;
+}
+
+.logreg-main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.login__title {
+    text-align: center;
+    font-family: var(--vs-russian-font);;
+    font-size: 1.375rem;
+    letter-spacing: -0.04em;
+
+    color: var(--vs-yellow);
+}
+
+.login {
+    margin: auto;
+    position: relative;
+    top: 50%;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logreg-form {
+    background: rgba(19, 18, 18, 0.68);
+    box-shadow: 0 0 2.875rem 1.5rem rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    padding: 2.625rem;
+}
+
+.logreg__input-box {
+    position: relative;
+}
+
+.input__label {
+    position: absolute;
+    top: 1.5625rem;
+    color: #757575;
+    left: 0.8125rem;
+    font-family: var(--vs-russian-font);;
+    font-size: 0.8125rem;
+    transition: 200ms;
+    pointer-events: none;
+}
+
+.login__place:focus ~ label,
+.login__place:valid ~ label{
+    top: 0;
+    transition: 200ms;
+}
+
+.input-checkbox {
+    background-color: var(--vs-yellow);
+    border: 0.0625rem solid var(--vs-yellow);
+    border-radius: 5px;
+    width: 0.8125rem;
+    height: 0.8125rem;
+}
+
+.input-checkbox__label {
+    font-family: var(--vs-russian-font);
+    font-size: 0.625rem;
+    margin-left: 0.625rem;
+    color: var(--vs-yellow);
+}
+
+.login__place {
+    position: relative;
+    display: block;
+    margin: 1.25rem auto;
+    width: 15.625rem;
+    height: 3.125rem;
+    background-color: unset;
+    padding: 0 0.6875rem;
+    font-family: var(--vs-russian-font);;
+    font-size: 0.8125rem;
+    letter-spacing: 0.1em;
+    border: 0;
+    border-bottom: 0.0625rem solid var(--vs-yellow);
+    outline: 0;
+
+    color: var(--vs-yellow);
+}
+
+.reglog__input-img {
+    position: absolute;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    top: 1.5625rem;
+    left: 90%;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.login__submit {
+    background-color: var(--vs-yellow);
+    color: #131212;
+    font-family: var(--vs-russian-font);;
+    font-size: 0.875rem;
+    transition: 200ms;
+    margin-top: 0.625rem;
+    width: 17.1875rem;
+    height: 2.5rem;
+    border: 0.0625rem solid var(--vs-yellow);
+    border-radius: 0.3125rem;
+}
+
+.login__submit:hover {
+    background-color: unset;
+    transition: 200ms;
+    color: var(--vs-yellow);
+}
+
+.reglog_a {
+    display: block;
+    text-align: center;
+    font-family: var(--vs-russian-font);
+    font-size: 0.625rem;
+    letter-spacing: -0.04em;
+    text-decoration-line: underline;
+    margin-top: 0.625rem;
+
+    color: var(--vs-yellow);
+}

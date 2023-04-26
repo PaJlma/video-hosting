@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Heebo:wght@400;700&family=Jockey+One&display=swap" rel="stylesheet">
+    <title>The Wise Mystical Tree music 10 hours</title>
+    <link rel="stylesheet" href="css/main.css" class="disable-caching-href">
+    <link rel="stylesheet" href="css/video-style.css" class="disable-caching-href">
+    <link rel="stylesheet" href="css/header.css" class="disable-caching-href">
+    <link rel="stylesheet" href="css/sidebar.css" class="disable-caching-href">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="video__sidebar-menu sidebar sidebar-menu-backgrounded disable activating-sidebar">
+        <div class="sidebar__main">
+            <button class="sidebar-menu-backgrounded__button activating"></button>
+            <a href="index.html"><div class="sidebar-menu-backgrounded__logo activating"></div></a>
+        </div>
+        <div class="sidebar__main-block sidebar__block">
+            <div class="sidebar-case">
+                <img src="images/eye.svg" alt="recommendations" class="sidebar-main-case__img">
+                <p class="sidebar__text">Рекомендации</p>
+            </div>
+
+            <div class="sidebar-case">
+                <img src="images/subscribe.svg" alt="subscribes" class="sidebar-main-case__img">
+                <p class="sidebar__text">Подписки</p>
+            </div>
+
+            <div class="sidebar-case">
+                <img src="images/like.svg" alt="likes" class="sidebar-main-case__img">
+                <p class="sidebar__text">Понравившиеся</p>
+            </div>
+
+            <div class="sidebar-case">
+                <img src="images/clock.svg" alt="history" class="sidebar-main-case__img">
+                <p class="sidebar__text">История</p>
+            </div>
+        </div>
+
+        <div class="sidebar__subscribes-block sidebar__block">
+
+            <h3 class="sidebar__title">Ваши подписки:</h3>
+            <div class="sidebar__subscribes-place">
+                <!--SPA LOADING PLACE-->
+            </div>
+            <button class="sidebar__show-all" id="subscribes-show-all">Показать всё</button>
+        </div>
+
+        <div class="sidebar__category-block sidebar__block">
+            <h3 class="sidebar__title">Категории:</h3>
+
+            <div class="sidebar-case">
+                <p class="sidebar__text">Игры</p>
+            </div>
+
+            <div class="sidebar-case">
+                <p class="sidebar__text">Животные</p>
+            </div>
+
+            <div class="sidebar-case">
+                <p class="sidebar__text">Прямые эфиры</p>
+            </div>
+
+            <div class="sidebar-case">
+                <p class="sidebar__text">Блоги</p>
+            </div>
+
+            <div class="sidebar-case">
+                <p class="sidebar__text">Окружающий мир</p>
+            </div>
+
+            <button class="sidebar__show-all">Показать всё</button>
+        </div>
+    </div>
+    <header>
+        <div class="header wrapper flex">
+            <div class="header__left-side">
+                <button class="header__menu activating"></button>
+                <a href="index.html"><div class="header__logo activating"></div></a>
+            </div>
+
+            <div class="header__search">
+                <input type="search" class="header__search-place" placeholder="Поиск">
+                <button type="submit" class="header__search-submit"></button>
+            </div>
+
+            <div class="header__right-side">
+                <a href="login.html" class="header__login activating">Войти</a>
+                <a href="registration.html" class="header__registration activating">Зарегистрироваться</a>
+                <img src="images/settings.svg" alt="settings" class="header__settings activating">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="video wrapper flex">
+            <div class="video__block">
+                <video src="" controls autoplay class="vs-video"></video> <!-- <----------------------------------------------------- AUTOPLAY HERE -->
+                <h3 class="video__title"><!--SPA LOADING PLACE--></h3>
+                <div class="video__statistics statistics">
+                    <div class="statistics__row">
+                        <div class="statistics__channel channel">
+                            <a href="#" class="channel__a"><img src="" alt="avatar" class="channel__avatar"></a>
+                            <div class="channel__info">
+                                <a href="#" class="channel__a"><p class="channel__name"><!--SPA LOADING PLACE--></p></a>
+                                <p class="channel__subscribers"><!--SPA LOADING PLACE--></p>
+                            </div>
+                            <button class="channel__subscribe-button activating">Подписаться</button>
+                        </div>
+                        <div class="flex align-items-center" style="gap: 30px;">
+                            <div class="statistics__reputation reputation">
+                                <div class="reputation__likes">
+                                    <img src="images/like.svg" alt="likes" class="reputation__likes-img">
+                                    <p class="reputation__text" id="video_likes"><!--SPA LOADING PLACE--></p>
+                                </div>
+                                <div class="reputation__dislikes">
+                                    <img src="images/dislike.svg" alt="likes" class="reputation__likes-img">
+                                    <p class="reputation__text" id="video_dislikes"><!--SPA LOADING PLACE--></p>
+                                </div>
+                            </div>
+                            <div class="statistics__share share activating">
+                                <img src="images/share.svg" alt="share" class="share__img">
+                                <p class="share__text">Поделиться</p>
+                            </div>
+                        </div>
+                        <div class="statistics__report report activating">
+                            <img src="images/report.svg" alt="report" class="report__img">
+                            <p class="report__text">Пожаловаться</p>
+                        </div>
+                    </div>
+                    <div class="statistics__row">
+                        <div class="statistics__views views">
+                            <p class="views__text"></p>
+                            <p class="views__text" id="video-time"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video__description description">
+                    <div class="description__title">Описание:</div>
+                    <div class="description__text">
+                        <!--SPA LOADING PLACE-->
+                    </div>
+                </div>
+
+                <div class="video-sidebar" id="mini-video-sidebar">
+                    <!-- SPA LOADING PLACE -->
+                </div>
+
+                <div class="video__commentaries commentaries">
+                    <p class="commentaries__count"></p>
+
+                    <div class="commentaries__input-box">
+                        <textarea name="commentary" rows="1" placeholder="Оставьте свой комментарий" class="commentaries__text-area"></textarea>
+                        <button class="commentaries__submit activating"></button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="video-sidebar" id="big-video-sidebar">
+                <!--SPA LOADING PLACE-->
+            </div>
+        </div>
+    </main>
+    <script src="scripts/video.js" class="disable-caching-src"></script>
+    <script src="scripts/menuButton.js" class="disable-caching-src"></script>
+    <script src="scripts/sidebarMenuButton.js" class="disable-caching-src"></script>
+    <script src="scripts/sidebar.js" class="disable-caching-src"></script>
+</body>
+</html>
