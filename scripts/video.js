@@ -56,21 +56,25 @@ async function generateViewPage() {
     const videosObject = await readJSON(videoJSON);
     const channelsObject = await readJSON(channelJSON);
 
-    fillValuesIntoHTMLDOM(videosObject, channelsObject);
-    generateCommentariesDOM(videosObject);
-    videoSidebars[0].append(...generateVideoSidebarCasesDOM(videosObject, channelsObject));
-    videoSidebars[1].append(...generateVideoSidebarCasesDOM(videosObject, channelsObject));
-    // Изменение высоты блока ввода комментария относительно написанного кол-ва строк
-    textarea.addEventListener('keydown', function () {
-        this.style.cssText = 'height:auto; padding:9px';
-        this.style.cssText = 'height:' + this.scrollHeight + 'px';
-    })
-
-    // Сделать комментарий, нажимая кнопку
-    submitButton.addEventListener('click', () => {
-        let commentaryText = input.value
-        madeCommentary(commentaryText);
-    });
+    if (!Object.keys(videosObject).includes(videoID)) {
+        mainBlock.innerHTML = '<p style="font-size: 4rem; " class="video__title">Видео не найдено</p>'
+    } else {
+        fillValuesIntoHTMLDOM(videosObject, channelsObject);
+        generateCommentariesDOM(videosObject);
+        videoSidebars[0].append(...generateVideoSidebarCasesDOM(videosObject, channelsObject));
+        videoSidebars[1].append(...generateVideoSidebarCasesDOM(videosObject, channelsObject));
+        // Изменение высоты блока ввода комментария относительно написанного кол-ва строк
+        textarea.addEventListener('keydown', function () {
+            this.style.cssText = 'height:auto; padding:9px';
+            this.style.cssText = 'height:' + this.scrollHeight + 'px';
+        })
+    
+        // Сделать комментарий, нажимая кнопку
+        submitButton.addEventListener('click', () => {
+            let commentaryText = input.value
+            madeCommentary(commentaryText);
+        });
+    }
 };
 
 async function fillValuesIntoHTMLDOM(videoObject, channelObject) {
