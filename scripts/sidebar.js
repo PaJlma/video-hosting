@@ -1,16 +1,9 @@
+import readJSON from './modules/readJSON.js'
+
 const subscribesBlock = document.querySelector('.sidebar__subscribes-place');
 const subscribesShowAll = document.querySelector('#subscribes-show-all');
 const DEFAULT_SUBSCRIBES_COUNT = 6; // Количество каналов на которые вы подписаны, показываемых изначально
 const subscribersJSON = 'json/channels.json';
-
-async function readJSON(filePath) {
-    const response = await fetch(filePath);
-    if (response.status === 200) {
-        return response.json();
-    } else {
-        throw new Error('Error. Response status is not 200.');
-    };
-};
 
 async function generateSidebarSubscribesDOM() {
     const subscribes = await readJSON(subscribersJSON);

@@ -1,85 +1,11 @@
+// import readJSON from './modules/readJSON.js'
+import { shuffle, getNoun, asyncCachingDecorator } from './modules/otherTools.js';
+import { showTime } from './modules/timeTools.js';
+
 const videosBlock = document.querySelector('.videos'); // Блок div, в котором находятся строчки с видео
 const videosRows = document.getElementsByClassName('videos__row'); // Сама строчка
 const videosJSON = '../json/videos.json' // Путь к JSON файлу
 
-// Функция случайного перемешивания массива
-function shuffle(array) {
-    return array.sort(() => Math.random() - 0.5);
-};
-
-function asyncCachingDecorator(callback) {
-    const cache = new Map();
-    return async function(argument) {
-        if (cache.has(argument)) {
-            return cache.get(argument);
-        } else {
-            const result = await callback.call(this, argument);
-            cache.set(argument, result);
-            return result;
-        };
-    };
-};
-
-// Функция, которая сравнивает текущее время с временем записаным в JSON файле
-// и показывает сколько времени прошло с тех пор
-function showTime(videoTime) {
-    const now = new Date();
-    let videoTimeArr = videoTime.split(" ").map(Number);
-
-    let videoDate = new Date(videoTimeArr[0], videoTimeArr[1]-1, videoTimeArr[2], videoTimeArr[3], videoTimeArr[4], videoTimeArr[5]);
-
-    let diffMs = now - videoDate;
-
-    let timeAgo = {
-        seconds: Math.floor(diffMs / 1000),
-        get minutes() { return Math.floor(this.seconds / 60) },
-        get hours() { return Math.floor(this.minutes / 60) },
-        get days() { return Math.floor(this.hours / 24) },
-        get weeks() { return Math.floor(this.days / 7) },
-        get months() { return Math.floor(this.weeks / 4) },
-        get years() { return Math.floor(this.months / 12) },
-
-        get timeToShow() {
-            if (this.years != 0) {
-                return `${this.years} лет`
-            } else if (this.months > 0) {
-                return `${this.months} месяцев`
-            } else if (this.weeks > 0) {
-                return `${this.weeks} недель`
-            } else if (this.days > 0) {
-                return `${this.days} дней`
-            } else if (this.hours > 0) {
-                return `${this.hours} часов`
-            } else if (this.minutes > 0) {
-                return `${this.minutes} минут`
-            } else {
-                return `${this.seconds} секунд`
-            };
-        },
-    };
-    const {timeToShow} = timeAgo;
-
-    return timeToShow;
-};
-
-// Функция склонения слов, относительно числа
-function getNoun(number, one, two, five) {
-    let n = Math.abs(number);
-    n %= 100;
-    if (n >= 5 && n <= 20) {
-        return five;
-    };
-    n %= 10;
-    if (n === 1) {
-        return one;
-    };
-    if (n >= 2 && n <= 4) {
-        return two;
-    };
-    return five;
-};
-
-// Функция чтения JSON файла
 async function readJSON(filePath) {
     const response = await fetch(filePath);
     if (response.status === 200) {
