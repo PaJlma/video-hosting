@@ -435,7 +435,7 @@ main {
     display: block;
     width: 90%;
     background-color: unset;
-    padding: 0.3125rem 0.6875rem;
+    /* padding: 0.3125rem 0.6875rem; */
     font-family: var(--vs-russian-font);;
     font-size: 0.8125rem;
     letter-spacing: 0.1em;
@@ -444,6 +444,7 @@ main {
     outline: 0;
     resize: none;
     color: var(--vs-yellow);
+    overflow: hidden;
 }
 
 .commentaries__submit {

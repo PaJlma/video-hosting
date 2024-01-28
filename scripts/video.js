@@ -28,6 +28,7 @@ const videoID = rawURLParams.slice(rawURLParams.indexOf('=')+1)
 
 // Функция, позволяющая сделать комментарий
 function madeCommentary(commentaryText) {
+    commentaryText =  commentaryText.replaceAll('\n', '<br>');
     if(commentaryText.length > 0) {
         const div = document.createElement('div');
         div.className = "commentaries__case";
@@ -64,13 +65,15 @@ async function generateViewPage() {
         videoSidebars[0].append(...generateVideoSidebarCasesDOM(videosObject, channelsObject));
         videoSidebars[1].append(...generateVideoSidebarCasesDOM(videosObject, channelsObject));
         // Изменение высоты блока ввода комментария относительно написанного кол-ва строк
-        textarea.addEventListener('keydown', function () {
-            this.style.cssText = 'height:auto; padding:9px';
-            this.style.cssText = 'height:' + this.scrollHeight + 'px';
-        })
+        textarea.addEventListener('keydown', eventAdaptingCommentaryTextarea)
+        // function () {
+        //     this.style.cssText = 'height:auto; padding:9px';
+        //     this.style.cssText = 'height:' + this.scrollHeight + 'px';
+        // }
     
         // Сделать комментарий, нажимая кнопку
         submitButton.addEventListener('click', () => {
+            eventAdaptingCommentaryTextarea()
             let commentaryText = input.value
             madeCommentary(commentaryText);
         });
@@ -178,6 +181,14 @@ function generateVideoSidebarCasesDOM(videoObject, channelObject) {
         }
     }
     return shuffle(videoSidebarCases);
+}
+
+function eventAdaptingCommentaryTextarea() {
+    const textarea = document.querySelector('.commentaries__text-area');
+    setTimeout(() => {
+        textarea.style.height = 'auto';
+        textarea.style.height = `${textarea.scrollHeight}px`;
+    }, 1);
 }
 
 generateViewPage();

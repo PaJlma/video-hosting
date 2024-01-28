@@ -8,17 +8,8 @@
     "channelIsLive": false
   },
 
-  "2": {
-    "channelName": "Trahtrahich",
-    "channelAvatarPath": "../images/avatars/trahtrahich.png",
-    "subscribersCount": 0,
-    "channelIsConfirmed": false,
-    "channelHasNewVideos": false,
-    "channelIsLive": false
-  },
-
   "3": {
-    "channelName": "Assmolov",
+    "channelName": "Asmolov",
     "channelAvatarPath": "../images/avatars/assmolov.png",
     "subscribersCount": 0,
     "channelIsConfirmed": true,
@@ -53,42 +44,6 @@
     "channelIsLive": false
   },
 
-  "7": {
-    "channelName": "We got that butty, dude!",
-    "channelAvatarPath": "../images/avatars/butty.png",
-    "subscribersCount": 0,
-    "channelIsConfirmed": false,
-    "channelHasNewVideos": true,
-    "channelIsLive": false
-  },
-
-  "8": {
-    "channelName": "Dick Master",
-    "channelAvatarPath": "../images/avatars/dick.png",
-    "subscribersCount": 0,
-    "channelIsConfirmed": false,
-    "channelHasNewVideos": true,
-    "channelIsLive": true
-  },
-
-  "9": {
-    "channelName": "ХПХХЫХХПХПАА",
-    "channelAvatarPath": "../images/avatars/golovastic.png",
-    "subscribersCount": 0,
-    "channelIsConfirmed": true,
-    "channelHasNewVideos": true,
-    "channelIsLive": false
-  },
-
-  "10": {
-    "channelName": "Запрещенные барабанщики",
-    "channelAvatarPath": "../images/avatars/usec.png",
-    "subscribersCount": 0,
-    "channelIsConfirmed": false,
-    "channelHasNewVideos": false,
-    "channelIsLive": false
-  },
-
   "11": {
     "channelName": "Memes",
     "channelAvatarPath": "../images/avatars/memes.png",
@@ -98,17 +53,8 @@
     "channelIsLive": false
   },
 
-  "12": {
-    "channelName": "Billy Harrington",
-    "channelAvatarPath": "../images/avatars/billy.png",
-    "subscribersCount": 0,
-    "channelIsConfirmed": false,
-    "channelHasNewVideos": false,
-    "channelIsLive": false
-  },
-
   "13": {
-    "channelName": "F.U.C.K.E.R.",
+    "channelName": "S.T.A.L.K.E.R.",
     "channelAvatarPath": "../images/avatars/fucker.png",
     "subscribersCount": 0,
     "channelIsConfirmed": true,
